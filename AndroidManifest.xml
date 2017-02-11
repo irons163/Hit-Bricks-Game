@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="18" />
 
     <application
@@ -14,13 +14,30 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.try_hit_brick.MainActivity"
+            android:name="com.example.try_hit_brick.Logo"
+            android:theme="@android:style/Theme.NoTitleBar"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity 
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:name="com.example.try_hit_brick.MainMenu" >
+        </activity>
+                <activity 
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:name="com.example.try_hit_brick.About" >
+        </activity>
+                        <activity 
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:name="com.example.try_hit_brick.Rank" >
+        </activity>
+        <activity android:name="com.example.try_hit_brick.GameMap" >
+        </activity>
+        <activity android:name="com.example.try_hit_brick.MainActivity" >
         </activity>
     </application>
 

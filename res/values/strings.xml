@@ -5,4 +5,8 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
 
+    <string name="cantnull">名字不能為空！</string>
+    <string name="recordOK">紀錄完成!</string>
+    <string name="countinue">要繼續挑戰嗎?</string>
+    <string name="retry">重玩</string>
 </resources>

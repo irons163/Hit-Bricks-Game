@@ -2,6 +2,7 @@ package com.example.try_hit_brick;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.Window;
@@ -12,6 +13,14 @@ public class MainActivity extends Activity {
 	BallView myView;
 	static int  screenWidth;
 	static int screenHeight;
+	
+	Handler handler = new Handler(){
+		public void handleMessage(android.os.Message msg) {
+			onBackPressed();
+		}
+		
+	};
+	
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState)
@@ -33,8 +42,10 @@ public class MainActivity extends Activity {
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
 							 WindowManager.LayoutParams.FLAG_FULLSCREEN); 
 		
+		int playGameLevel = getIntent().getIntExtra("playGameLevel", 0);
+		
 		/* 創建GameSurfaceView對象 */
-		myView = new BallView(this);
+		myView = new BallView(this, playGameLevel);
 		//設置顯示GameSurfaceView視圖
 		setContentView(myView);
 	}//end of onCreate()
@@ -47,4 +58,13 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
+	@Override
+	public void onBackPressed() {
+		// TODO Auto-generated method stub
+		
+		myView.gameFlag = false;
+		myView.mainLoop.interrupt();
+		
+		super.onBackPressed();
+	}
 }

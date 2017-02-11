@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="itemcolor">#fff</color>
+    <color name="white1">#000000</color>
+    <color name="gray56">#338F8F8F</color>
+    <color name="yellow">#FFFFFF00</color>
+    <color name="black1">#FF000000</color>
+    <color name="blue1">#FF0000FF</color>
+    <color name="red1">#FFFF0000</color>
+    <color name="wheelback">#FF8A8CCE</color>
+
+    <color name="red">#ff0000</color>
+    <color name="green">#00ff00</color>
+    <color name="blue">#0000ff</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="turquoise">#40E0D0</color>
+</resources>
